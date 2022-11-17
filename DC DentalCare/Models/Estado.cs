@@ -1,6 +1,8 @@
 ﻿namespace DC_DentalCare.Models
 {
-    public class Estado
+    public enum Estado
     {
+        DISPONIBLE = 1,
+        RESERVADO = 2,
     }
 }
