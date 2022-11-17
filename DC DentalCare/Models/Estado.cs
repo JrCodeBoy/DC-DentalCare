@@ -1,8 +1,11 @@
-﻿namespace DC_DentalCare.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace DC_DentalCare.Models
 {
-    public enum Estado
+    public class Estado
     {
-        DISPONIBLE = 1,
-        RESERVADO = 2,
+        [Key]
+        public int Id { get; set; }
+        public String Nombre{ get; set; }
     }
 }

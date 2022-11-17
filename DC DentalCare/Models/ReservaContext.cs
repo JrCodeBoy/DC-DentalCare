@@ -9,11 +9,12 @@ namespace DC_DentalCare.Models
         protected override void OnConfiguring(DbContextOptionsBuilder option)
         {
 
-            option.UseSqlServer("Data Source=DESKTOP-KGSGH6K\\SQLEXPRESS ; Initial Catalog=Ventas ; Integrated Security= true");
+            option.UseSqlServer("Data Source=JUPITER\\SQLEXPRESS;Initial Catalog=DentalCareORT;Encrypt=false;Integrated Security= true");
 
 
         }
         public DbSet<Reserva> Reservas { get; set; }
+        public DbSet<Estado> Estados { get; set; }
 
 
     }
