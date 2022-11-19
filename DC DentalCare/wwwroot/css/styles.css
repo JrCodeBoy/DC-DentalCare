@@ -36,7 +36,7 @@ element.style {
 
 
 .dropbtn {
-    background-color: #4CAF50;
+    background-color: #2C3E50;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -60,6 +60,7 @@ element.style {
     z-index: 1;
     border-radius: 30px;
     border-style: none;
+
 }
 
     .dropdown-content a {
@@ -79,7 +80,7 @@ element.style {
 }
 
 .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+    background-color: black;
 }
 
 
