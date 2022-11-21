@@ -5,12 +5,21 @@ namespace DC_DentalCare.Models
 {
     public class Reserva
     {
-        [Key]
+        //entidad principal (agrupa a las demás)
+       [Key]
        public int Id { get; set; }
-       public DateTime Fecha { get; set; }
-       public String NombreDoctor{ get; set; }
-       public String NombreEspecialidad { get; set; }
-       public Estado Estado { get; set; }
+       
+       [ForeignKey("IdFecha")]
+       public int IdFecha { get; set; }
+
+       [ForeignKey("IdHorario")]
+       public int IdHorario { get; set; }
+
+       [ForeignKey("IdDoctor")]
+       public int IdDoctor { get; set; }
+
+       [ForeignKey("IdEstado")]
+       public int IdEstado { get; set; }
         
     }
 }

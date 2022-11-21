@@ -2,12 +2,10 @@
 
 namespace DC_DentalCare.Models
 {
-    public class Estado
+    public class Fecha
     {
         [Key]
         public int Id { get; set; }
-
-        //ESTADO: DISPONIBLE-NO DISPONIBLE
-        public String? Nombre { get; set; }
+        public DateTime Valor { get; set; } 
     }
 }
