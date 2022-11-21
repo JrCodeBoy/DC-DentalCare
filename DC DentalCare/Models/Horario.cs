@@ -2,12 +2,11 @@
 
 namespace DC_DentalCare.Models
 {
-    public class Estado
+    public class Horario
     {
         [Key]
         public int Id { get; set; }
 
-        //ESTADO: DISPONIBLE-NO DISPONIBLE
-        public String? Nombre { get; set; }
+        public string Name { get; set; }    //o hacerlo con una lista
     }
 }
