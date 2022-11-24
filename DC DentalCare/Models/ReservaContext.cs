@@ -9,7 +9,7 @@ namespace DC_DentalCare.Models
         protected override void OnConfiguring(DbContextOptionsBuilder option)
         {
 
-            option.UseSqlServer("Data Source=MSI\\SQLEXPRESS;Initial Catalog=DentalCareORT;Encrypt=false;Integrated Security= true; TrustServerCertificate = true" );
+            option.UseSqlServer("Data Source=JUPITER\\SQLEXPRESS;Initial Catalog=DentalCareORT;Encrypt=false;Integrated Security= true; TrustServerCertificate = true" );
 
 
         }

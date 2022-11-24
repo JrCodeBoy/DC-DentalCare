@@ -6,6 +6,8 @@ namespace DC_DentalCare.Models
     {
         [Key]
         public int Id { get; set; }
-        public DateTime Valor { get; set; } 
+        public String Valor { get; set; }
+
+
     }
 }
