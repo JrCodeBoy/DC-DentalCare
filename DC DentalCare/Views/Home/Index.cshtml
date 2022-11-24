@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 
 }
-@model IEnumerable<Reserva>
+@model Fecha
 
 <body id="page-top">
     <!-- Navigation-->
@@ -62,8 +62,32 @@
                 </div>
                 <div class="divider-custom-line"></div>
             </div>
+
+         
         <!--Implemento el bloque del calendario-->
-                <div
+            @*
+                <div @using (Html.BeginForm("GuardarFecha", "HomeController", FormMethod.Post,
+                 new { enctype = "multipart/form-data" }))
+                 {
+                <h4>Seleccione una Fecha</h4>
+                    Date: <input type="date" class='center' id="fecha" width='100' required/>
+                   @Html.TextBoxFor(model => model.Valor)
+                   <input type="submit" value="Mostrar Fecha" />
+                    }
+            *@
+
+                    <form asp-action="GuardarFecha" asp-controller="Reserva">
+                    <div class="form-group">
+
+                    <input asp-for="Valor" class='center' id="fecha" width='100' required class="form-control" />  
+                    </div>
+                    <div class="form-group" style="margin-top:10px;">
+                        <input type="submit" value="GuardarFecha" class="btn btne-outline-dark" />
+                    </div>
+                    </form>
+                   
+
+                    @*
                     class="container-fluid p-5 bg-primary text-white text-center">
                     <!-- Centro el campo fecha | Juani -->
                     <label for="fecha"></label>
@@ -72,8 +96,10 @@
                     <p></p>
                     <input
                     type="date" class='center' id="fecha" width='100' required/>
+                    *@
                 <!-- se centrò el obejto date | Juani -->
                 </div>
+
                 <div class="row justify-content-center">
                     <div class="col">
                         <div class="turno1">

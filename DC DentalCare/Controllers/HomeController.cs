@@ -9,10 +9,10 @@ namespace DC_DentalCare.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            return View();
+            return View();        
         }
 
-
+        
 
 
     }
