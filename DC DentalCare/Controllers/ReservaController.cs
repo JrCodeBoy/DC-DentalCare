@@ -28,7 +28,7 @@ namespace DC_DentalCare.Controllers
             using (ReservaContext context = new())
             {
 
-                //guarda de forma lógica el cliente, no lo guarda en la base de datos
+                //guarda de forma lógica la fecha, no lo guarda en la base de datos
                 context.Fechas.Add(Fecha);
                 //esta última línea es la que guarda en la base de datos
                 context.SaveChanges();
@@ -36,6 +36,22 @@ namespace DC_DentalCare.Controllers
 
 
             return RedirectToAction(nameof(Index),"Home");
+        }
+
+        [HttpPost]
+        public IActionResult Reservar(Reserva Reserva)
+        {
+            using (ReservaContext context = new())
+            {
+
+                //guarda de forma lógica la reserva, no lo guarda en la base de datos
+                context.Reservas.Add(Reserva);
+                //esta última línea es la que guarda en la base de datos
+                context.SaveChanges();
+            }
+
+
+            return RedirectToAction(nameof(Index), "Home");
         }
 
 
