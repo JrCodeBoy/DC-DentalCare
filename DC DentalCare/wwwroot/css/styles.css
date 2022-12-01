@@ -13,7 +13,25 @@ label {
         content: ""
     }
 
+.form-group {
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px;
+    margin: 5px;
+    }
+
 #fecha {
+    width: 30%;
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 30px;
+}
+
+.Guardar Fecha {
     width: 30%;
     overflow: hidden;
     background-color: #ffffff;

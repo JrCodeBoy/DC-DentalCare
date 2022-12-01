@@ -64,7 +64,7 @@
             </div>
 
          
-        <!--Implemento el bloque del calendario-->
+        <!--Implemento el bloque del calendario v1-->
             @*
                 <div @using (Html.BeginForm("GuardarFecha", "HomeController", FormMethod.Post,
                  new { enctype = "multipart/form-data" }))
@@ -77,15 +77,17 @@
             *@
 
                     <form asp-action="GuardarFecha" asp-controller="Reserva">
-                    <div class="form-group">
-
+                     <div class="form-group text-white text-center">
                     <input asp-for="Valor" class='center' id="fecha" width='100' required class="form-control" />  
                     </div>
-                    <div class="form-group" style="margin-top:10px;">
-                        <input type="submit" value="GuardarFecha" class="btn btne-outline-dark" />
+                    <div class="form-group" style="margin-top:10px; text-align:center; ">
+                    <input type="submit" value="Guardar Fecha" class="btn btn-primary" text-center />
                     </div>
                     </form>
-                   
+                    
+
+
+
 
                     @*
                     class="container-fluid p-5 bg-primary text-white text-center">
@@ -203,7 +205,15 @@
                             <div class="card-body">
                                 <h5 class="card-title">17:00 A 18:00 HS</h5>
                                 <p class="card-text">DISPONIBLE</p>
-                                <a href="#" class="btn btn-primary">Reservar</a>
+
+
+
+                            <form asp-action="Reservar" asp-controller="Reserva">                               
+                            <input type="submit" value="Reservar" class="btn btn-primary" text-center />                
+                            </form>
+
+                            <!--    Version 1.0 del boton de Reserva -->
+                            <!--    <a href="#" class="btn btn-primary">Reservar</a> -->
                             </div>
                         </div>
                     </div>
