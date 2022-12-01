@@ -78,17 +78,12 @@
 
                     <form asp-action="GuardarFecha" asp-controller="Reserva">
                      <div class="form-group text-white text-center">
-                    <input asp-for="Valor" class='center' id="fecha" width='100' required class="form-control" />  
+                    <input asp-for="Valor" type="date" class='center' id="fecha" width='100' required class="form-control" />  
                     </div>
                     <div class="form-group" style="margin-top:10px; text-align:center; ">
                     <input type="submit" value="Guardar Fecha" class="btn btn-primary" text-center />
                     </div>
-                    </form>
-                    
-
-
-
-
+                    </form>       
                     @*
                     class="container-fluid p-5 bg-primary text-white text-center">
                     <!-- Centro el campo fecha | Juani -->
@@ -99,9 +94,7 @@
                     <input
                     type="date" class='center' id="fecha" width='100' required/>
                     *@
-                <!-- se centrò el obejto date | Juani -->
                 </div>
-
                 <div class="row justify-content-center">
                     <div class="col">
                         <div class="turno1">
@@ -109,7 +102,9 @@
                                 <div class="card-body">
                                     <h5 class="card-title">09:00 A 10:00 HS</h5>
                                     <p class="card-text">DISPONIBLE</p>
-                                    <a href="#" class="btn btn-primary">Reservar</a>
+                            <form asp-action="Reservar" asp-controller="Reserva">
+                                <input type="submit" value="Reservar" class="btn btn-primary" text-center />
+                            </form>
                                 </div>
                             </div>
                         </div>
@@ -120,7 +115,9 @@
                                 <div class="card-body">
                                     <h5 class="card-title">11:00 A 12:00 HS</h5>
                                     <p class="card-text">DISPONIBLE</p>
-                                    <a href="#" class="btn btn-primary">Reservar</a>
+                            <form asp-action="Reservar" asp-controller="Reserva">
+                                <input type="submit" value="Reservar" class="btn btn-primary" text-center />
+                            </form>
                                 </div>
                             </div>
                         </div>
@@ -131,7 +128,9 @@
                                 <div class="card-body">
                                     <h5 class="card-title">13:00 A 14:00 HS</h5>
                                     <p class="card-text">DISPONIBLE</p>
-                                    <a href="#" class="btn btn-primary">Reservar</a>
+                            <form asp-action="Reservar" asp-controller="Reserva">
+                                <input type="submit" value="Reservar" class="btn btn-primary" text-center />
+                            </form>
                                 </div>
                             </div>
                         </div>
@@ -142,7 +141,9 @@
                                 <div class="card-body">
                                     <h5 class="card-title">15:00 A 16:00 HS</h5>
                                     <p class="card-text">DISPONIBLE</p>
-                                    <a href="#" class="btn btn-primary">Reservar</a>
+                            <form asp-action="Reservar" asp-controller="Reserva">
+                                <input type="submit" value="Reservar" class="btn btn-primary" text-center />
+                            </form>
                                 </div>
                             </div>
                         </div>
@@ -156,7 +157,9 @@
                                 <div class="card-body">
                                     <h5 class="card-title">10:00 A 11:00 HS</h5>
                                     <p class="card-text">DISPONIBLE</p>
-                                    <a href="#" class="btn btn-primary">Reservar</a>
+                            <form asp-action="Reservar" asp-controller="Reserva">
+                                <input type="submit" value="Reservar" class="btn btn-primary" text-center />
+                            </form>
                                 </div>
                             </div>
                         </div>
@@ -167,7 +170,9 @@
                                 <div class="card-body">
                                     <h5 class="card-title">12:00 A 13:00 HS</h5>
                                     <p class="card-text">DISPONIBLE</p>
-                                    <a href="#" class="btn btn-primary">Reservar</a>
+                            <form asp-action="Reservar" asp-controller="Reserva">
+                                <input type="submit" value="Reservar" class="btn btn-primary" text-center />
+                            </form>
                                 </div>
                             </div>
                         </div>
@@ -178,7 +183,9 @@
                                 <div class="card-body">
                                     <h5 class="card-title">14:00 A 15:00 HS</h5>
                                     <p class="card-text">DISPONIBLE</p>
-                                    <a href="#" class="btn btn-primary">Reservar</a>
+                            <form asp-action="Reservar" asp-controller="Reserva">
+                                <input type="submit" value="Reservar" class="btn btn-primary" text-center />
+                            </form>
                                 </div>
                             </div>
                         </div>
@@ -189,7 +196,9 @@
                                 <div class="card-body">
                                     <h5 class="card-title">16:00 A 17:00 HS</h5>
                                     <p class="card-text">DISPONIBLE</p>
-                                    <a href="#" class="btn btn-primary">Reservar</a>
+                            <form asp-action="Reservar" asp-controller="Reserva">
+                                <input type="submit" value="Reservar" class="btn btn-primary" text-center />
+                            </form>
                                 </div>
                             </div>
                         </div>
@@ -207,7 +216,7 @@
                                 <p class="card-text">DISPONIBLE</p>
 
 
-
+                            
                             <form asp-action="Reservar" asp-controller="Reserva">                               
                             <input type="submit" value="Reservar" class="btn btn-primary" text-center />                
                             </form>
@@ -312,7 +321,7 @@
                         <div class="form-floating mb-3">
                             <textarea class="form-control" id="message" type="text" placeholder="Ingrese aqui su mensaje..." style="height: 10rem" data-sb-validations="required"></textarea>
                             <label for="message">Mensaje</label>
-                            <div class="invalid-feedback" data-sb-feedback="message:required">Un telefono es necesario.</div>
+                            <div class="invalid-feedback" data-sb-feedback="message:required">Un mensaje es necesario.</div>
                         </div>
                         <!-- Submit success message-->
                         <!---->
