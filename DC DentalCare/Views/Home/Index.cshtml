@@ -7,7 +7,7 @@
 @model Fecha
 
 <body id="page-top">
-    <!-- Navigation-->
+    <!--Se implementa el NAVBAR-->
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="#page-top">DC Dental Care</a>
@@ -30,14 +30,14 @@
             </div>
         </div>
     </nav>
-    <!-- Masthead-->
+    <!-- Se implementa el HEADER-->
     <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
-            <!-- Masthead Avatar Image-->
+            <!--Se implementa el Avatar-->
             <img class="masthead-avatar mb-5" src="~/img/avataaars.svg" alt="..." />
-            <!-- Masthead Heading-->
+            <!-- Se implementa el Heading-->
             <h1 class="masthead-heading text-uppercase mb-0">Bienvenido</h1>
-            <!-- Icon Divider-->
+            <!--Se implementa el icono divisor-->
             <div class="divider-custom divider-light">
                 <div class="divider-custom-line"></div>
                 <div class="divider-custom-icon">
@@ -45,37 +45,24 @@
                 </div>
                 <div class="divider-custom-line"></div>
             </div>
-            <!-- Masthead Subheading-->
+            <!-- Se implementa el Subheading-->
             <p class="masthead-subheading font-weight-light mb-0">Sistema integral de gestion de turnos</p>
         </div>
     </header>
-    <!-- Grid Items-->
+    <!-- Se implementa la grilla que contiene los elementos de la grilla de turnos(Subheading) -->
     <section class="page-section portfolio" id="portfolio">
         <div class="container">
-            <!-- Portfolio Section Heading-->
+            <!-- Se implementa el heading de la grilla de turnos--->
             <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Reserva de turnos</h2>
-            <!-- Icon Divider-->
+            <!--Se implementa el icono divisor-->
             <div class="divider-custom">
                 <div class="divider-custom-line"></div>
                 <div class="divider-custom-icon">
                     <i class="fas fa-star"></i>
                 </div>
                 <div class="divider-custom-line"></div>
-            </div>
-
-         
-        <!--Implemento el bloque del calendario v1-->
-            @*
-                <div @using (Html.BeginForm("GuardarFecha", "HomeController", FormMethod.Post,
-                 new { enctype = "multipart/form-data" }))
-                 {
-                <h4>Seleccione una Fecha</h4>
-                    Date: <input type="date" class='center' id="fecha" width='100' required/>
-                   @Html.TextBoxFor(model => model.Valor)
-                   <input type="submit" value="Mostrar Fecha" />
-                    }
-            *@
-
+            </div>            
+            <!--Se immplementa el bloque del calendario v2-->
                     <form asp-action="GuardarFecha" asp-controller="Reserva">
                      <div class="form-group text-white text-center">
                     <input asp-for="Valor" type="date" class='center' id="fecha" width='100' required class="form-control" />  
@@ -83,19 +70,21 @@
                     <div class="form-group" style="margin-top:10px; text-align:center; ">
                     <input type="submit" value="Guardar Fecha" class="btn btn-primary" text-center />
                     </div>
-                    </form>       
+                    </form>
+            <!--Se immplementa el bloque del calendario v1-->
                     @*
                     class="container-fluid p-5 bg-primary text-white text-center">
-                    <!-- Centro el campo fecha | Juani -->
                     <label for="fecha"></label>
-                    <!-- se declarò la variable campoFecha | Juani -->
+                    <!-- se declarò la variable campoFecha -->
                     <h4>Seleccione una Fecha</h4>
                     <p></p>
                     <input
                     type="date" class='center' id="fecha" width='100' required/>
                     *@
                 </div>
+        <!--Se implementan los objetos del tipo 'card' (Reservas) -->
                 <div class="row justify-content-center">
+            <!-- INICIO Primera columna -->
                     <div class="col">
                         <div class="turno1">
                             <div class="card">
@@ -151,6 +140,7 @@
                         <p></p>
                     </div>
                     <!-- FIN Primera columna -->
+            <!-- INICIO segunda columna -->
                     <div class="col">
                         <div class="turno5">
                             <div class="card">
@@ -206,21 +196,17 @@
                         <p></p>
                     </div>
                 </div>
-            <!-- FIN Segunda columna -->
+            <!-- FIN segunda columna -->
             <div class="row align-items-end">
                 <div class="col">
                     <div class="turno9">
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">17:00 A 18:00 HS</h5>
-                                <p class="card-text">DISPONIBLE</p>
-
-
-                            
+                                <p class="card-text">DISPONIBLE</p>                            
                             <form asp-action="Reservar" asp-controller="Reserva">                               
                             <input type="submit" value="Reservar" class="btn btn-primary" text-center />                
                             </form>
-
                             <!--    Version 1.0 del boton de Reserva -->
                             <!--    <a href="#" class="btn btn-primary">Reservar</a> -->
                             </div>
@@ -230,12 +216,12 @@
             </div>
         </div>
     </section>
-    <!-- About Section-->
+    <!-- Se implementa la seccion de 'Especialidades'-->
     <section class="page-section bg-primary text-white mb-0" id="about">
         <div class="container">
-            <!-- About Section Heading-->
+            <!-- Se implementa el heading de la seccion de 'Especialidades'-->
             <h2 class="page-section-heading text-center text-uppercase bg-primary">Seleccione una especialidad</h2>
-            <!-- Icon Divider-->
+            <!--Se implementa el icono divisor-->
             <div class="divider-custom divider-light">
                 <div class="divider-custom-line"></div>
                 <div class="divider-custom-icon">
@@ -244,13 +230,12 @@
                 <div class="divider-custom-line"></div>
             </div>
         </div>
-
         <div class="row">
             <c1-3 class="text-center">
-
                 <!-- Especialidades-->
                 <h5>Especialidades</h5>
                 <p></p>
+                <!-- Se implementa el dropdown -->
                 <div class="dropdown">
                     <button class="dropbtn">Elija una especialidad</button>
                     <div class="dropdown-content">
@@ -274,19 +259,15 @@
                         <a href="#">Daniel</a>
                     </div>
                 </div>
-
             </c1-3>
         </div>
-
-
     </section>
-
-    <!-- Contact Section-->
+    <!-- Se implementa la seccion de 'Datos de la Reserva'-->
     <section class="page-section" id="contact">
         <div class="container">
-            <!-- Contact Section Heading-->
+            <!-- Se implementa el heading de la seccion 'Datos de la Reserva'-->
             <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Datos de la reserva</h2>
-            <!-- Icon Divider-->
+            <!--Se implementa el icono divisor-->
             <div class="divider-custom">
                 <div class="divider-custom-line"></div>
                 <div class="divider-custom-icon">
@@ -294,51 +275,51 @@
                 </div>
                 <div class="divider-custom-line"></div>
             </div>
-            <!-- Contact Section Form-->
+            <!-- Se implementa el formulario para 'Datos de la Reserva'-->
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-xl-7">
                     <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                        <!-- Name input-->
+                        <!-- input Nombre-->
                         <div class="form-floating mb-3">
                             <input class="form-control" id="name" type="text" placeholder="Ingrese su nombre..." data-sb-validations="required" />
                             <label for="name">Nombre Completo</label>
                             <div class="invalid-feedback" data-sb-feedback="name:required">Es necesario ingresar su nombre.</div>
                         </div>
-                        <!-- Email address input-->
+                        <!-- input Email -->
                         <div class="form-floating mb-3">
                             <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
                             <label for="email">Email</label>
                             <div class="invalid-feedback" data-sb-feedback="email:required">Un Email es necesario.</div>
                             <div class="invalid-feedback" data-sb-feedback="email:email">El Email no es valido.</div>
                         </div>
-                        <!-- Phone number input-->
+                        <!-- input Telefono-->
                         <div class="form-floating mb-3">
                             <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
                             <label for="phone">Telefono</label>
                             <div class="invalid-feedback" data-sb-feedback="phone:required">Un telefono es necesario.</div>
                         </div>
-                        <!-- Message input-->
+                        <!-- input Mensaje-->
                         <div class="form-floating mb-3">
-                            <textarea class="form-control" id="message" type="text" placeholder="Ingrese aqui su mensaje..." style="height: 10rem" data-sb-validations="required"></textarea>
+                            <textarea class="form-control" id="message" type="text" placeholder="Ingrese aqui su mensaje..." style="height: 10rem"></textarea>
                             <label for="message">Mensaje</label>
                             <div class="invalid-feedback" data-sb-feedback="message:required">Un mensaje es necesario.</div>
                         </div>
-                        <!-- Submit success message-->
+                        <!-- Mensaje de Reserva OK -->
                         <!---->
-                        <!-- This is what your users will see when the form-->
-                        <!-- has successfully submitted-->
+                        <!-- Esto es lo que usuario ve cuando -->
+                        <!-- se realiza la reserva con exito -->
                         <div class="d-none" id="submitSuccessMessage">
                             <div class="text-center mb-3">
-                                <div class="fw-bolder">Formulario enviado con exito!</div>
+                                <div class="fw-bolder">Se reserva se ha realizado con exito!</div>
                                 <br/>
                             </div>
                         </div>
-                        <!-- Submit error message-->
+                        <!-- Mensaje de Reserva con ERROR -->
                         <!---->
-                        <!-- This is what your users will see when there is-->
-                        <!-- an error submitting the form-->
+                        <!-- Esto es lo que usuario ve cuando ->
+                        <!-- hubo un error al procesar la reserva-->
                         <div class="d-none" id="submitErrorMessage">
-                            <div class="text-center text-danger mb-3">Error al enviar el mensaje!</div>
+                            <div class="text-center text-danger mb-3">Hubo un error durante la registracion de sus datos!</div>
                         </div>
                         <!-- Submit Button-->
                         <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Enviar</button>
